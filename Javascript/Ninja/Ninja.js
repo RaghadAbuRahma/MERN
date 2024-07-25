@@ -10,7 +10,7 @@ class Ninja {
     }
 
     showStat(){
-        console.log("Name:" + this.name + "Health:" + this.health + "Strength:" + this.strength + "Speed:" + this.speed);
+        console.log("Name:" + this.name +","+ "Health:" + this.health +","+  "Strength:" + this.strength +","+  "Speed:" + this.speed);
     }
 
     drinkSake(){
@@ -21,6 +21,29 @@ class Ninja {
 const N = new Ninja("raghad");
 // N.sayName();
 
-N.drinkSake();
-N.showStat();
+// N.drinkSake();
+// N.showStat();
+
+
+class Sensei extends Ninja {
+    constructor(name){
+        super(name);
+        this.health = 200;
+        this.speed =10;
+        this.strength = 10;
+        this. wisdom = 10;
+    }
+
+
+speakWisdom(){
+    super.drinkSake();
+    console.log("this is a wise phrase");
+
+
+    }
+
+}
+const S1 = new Sensei("Sensei");
+S1.speakWisdom();
+S1.showStat();
 
