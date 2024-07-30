@@ -1,21 +1,31 @@
-import React, { useState } from 'react'
-import Card from './Card'
+
+import { useState } from 'react'
+import styles from './PersonCard.module.css'
 
 export default function PersonCard(props) {
 
 
+    const {name,age,haircolor}=props;
+    const [Birthday, setBirthDay] =useState(age);
+
+    const BirthDay = () => {
+      setBirthDay(Birthday+1) 
+
+    }
+
 
   return (
-    <div className='cards'>
+    <div>
+        <div className={styles.PersonCard}>
+            <h3>Name : {name}</h3>
+            <p>Age: {Birthday}</p>
+            <p>hair-color :{haircolor} </p>
+            <button onClick={BirthDay}>BirthDay Button for {name} </button>
 
 
-        
-        <Card name={'Raghad Abu rahma'} age={'18'} haircolor={'white'}/>
-        <Card name={'Mohammad Tabakhna'} age={'48'} haircolor={'Black'}/>
-        <Card name={'Shatha Bast'} age={'20'} haircolor={'Gold'}/>
-        <Card name={'Muath Ademar'} age={'33'} haircolor={'Blue'}/>
-        
-    
+        </div>
     </div>
   )
 }
+
+
