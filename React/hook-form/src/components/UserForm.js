@@ -31,27 +31,28 @@ const UserForm = (props) => {
     
     return(
         <form onSubmit={ createUser }>
-            <div>
+            <h1>User Form</h1>
+            <div class="form-group">
                 <label>First Name: </label> 
-                <input type="text" onChange={ (e) => setFisrtname(e.target.value) } value={ firstname }/>
+                <input type="text" class="form-control" onChange={ (e) => setFisrtname(e.target.value) } value={ firstname }/>
             </div>
-            <div>
+            <div class="form-group">
                 <label>Last Name: </label> 
-                <input type="text" onChange={ (e) => setLastname(e.target.value) } value={ lastname } />
+                <input type="text" class="form-control" onChange={ (e) => setLastname(e.target.value) } value={ lastname } />
             </div>
-            <div>
+            <div class="form-group">
                 <label>Email Address: </label> 
-                <input type="text" onChange={ (e) => setEmail(e.target.value) } value={ email } />
+                <input type="text" class="form-control" onChange={ (e) => setEmail(e.target.value) } value={ email } />
             </div>
-            <div>
+            <div class="form-group">
                 <label>Password: </label>
-                <input type="text" onChange={ (e) => setPassword(e.target.value) } value={ password }/>
+                <input type="text" class="form-control" onChange={ (e) => setPassword(e.target.value) } value={ password }/>
             </div>
-            <div>
+            <div class="form-group">
                 <label>Confirm Password: </label>
-                <input type="text" onChange={ (e) => setConfirmPassword(e.target.value) } value={ confirmPassword }/>
+                <input type="text" class="form-control" onChange={ (e) => setConfirmPassword(e.target.value) } value={ confirmPassword }/>
             </div>
-            <input type="submit" value="Create User" />
+            <input class="btn btn-info" type="submit" value="Create User" />
         </form>
     );
 };

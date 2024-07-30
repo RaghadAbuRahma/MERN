@@ -4,13 +4,15 @@ const DisplayInfo = (props) => {
     const {user} = props;
     const {firstname, lastname, email, password,confirmPassword} = user;
   return (
-    <>
-        <h2>First Name: {firstname}</h2> 
-        <h2>Last Name: {lastname}</h2> 
-        <h2>Email Address: {email}</h2>
-        <h2>Password: {password}</h2>
-        <h2>Confirm Password: {confirmPassword}</h2>
-    </>
+    <div class="card">
+        <div class="card-body">
+            <p class="card-text text-sm-center"><span class="font-weight-bold">First Name: </span>{firstname}</p> 
+            <p class="card-text"><span class="font-weight-bold">Last Name: </span>{lastname}</p> 
+            <p class="card-text"><span class="font-weight-bold">Email Address:</span> {email}</p>
+            <p class="card-text"><span class="font-weight-bold">Password:</span> {password}</p>
+            <p class="card-text"><span class="font-weight-bold">Confirm Password:</span> {confirmPassword}</p>
+        </div>
+    </div>
   )
 }
 
