@@ -12,21 +12,16 @@ export default function Pokemon() {
         .then(response => {
         return response.json();
 
-      }).then(data => {
-        setPokemons(data.results.map(pokemon => pokemon.name));
+      }).then(response => {
+        setPokemons(response.results.map(pokemon => pokemon.name));
 
 
     }).catch(err=>{
-          console.log(err);
-      });
+        console.log(err);
+        });
     }
 
-
-
-
-
-
-  return (
+return (
 
 
     <div>
@@ -40,7 +35,7 @@ export default function Pokemon() {
 
     ); 
 
-  
+
 
     
 

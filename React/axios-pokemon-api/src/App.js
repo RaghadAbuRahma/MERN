@@ -1,14 +1,13 @@
-
 import './App.css';
-import Box from './components/Box';
+import Pokemon from './components/Pokemon';
+
 
 function App() {
   return (
     <div className="App">
-     <Box></Box>
+      <Pokemon></Pokemon>
     </div>
   );
 }
 
 export default App;
-                                      
