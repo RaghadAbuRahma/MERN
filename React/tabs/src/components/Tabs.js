@@ -2,7 +2,7 @@ import React , { useState } from 'react'
 import styles from './Tab.module.css'
 
 const Tabs = (props) =>  {
-  const {header , content} = props
+  // const {header , content} = props
   const Tab1 = {header: "Tab1", content:"Tab's 1 content is showing here ..."}
   const Tab2 = {header: "Tab2", content:"Tab's 2 content is showing here ..."}
   const Tab3 = {header: "Tab3", content:"Tab's 3 content is showing here ..."}

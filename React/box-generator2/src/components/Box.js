@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import StyledBox from './styledBox';
+import styles from './Box.module.css'
 
 
 const Box = (props) => {
@@ -31,10 +32,12 @@ const Box = (props) => {
                 </div>
                 <input type="submit" value="Create Box" />
             </form>
-            {colors.map((colorx, index) => 
-            <StyledBox id={index} backgroundcolor={colorx}></StyledBox>
+            <div className={styles.boxes}>
+                {colors.map((colorx, index) => 
+                <StyledBox id={index} backgroundcolor={colorx}></StyledBox>)}
+            </div>
 
-)}
+
     </div>
 )
 }
