@@ -1,10 +1,11 @@
 import React from 'react';
 import styles from './DisplayTasks.module.css';
 
-const DisplayTasks = ({ tasks, checkComplete }) => {
+const DisplayTasks = ({ tasks, checkComplete, onDelete}) => {
+    
 
 
-   
+
     return (
         <div>
             <ul>
@@ -16,7 +17,7 @@ const DisplayTasks = ({ tasks, checkComplete }) => {
                             checked={task.completed}
                             onChange={() => checkComplete(i)}
                         />
-                        {/* <button onClick={deleteTask(i)}>Delete</button> */}
+                        <button onClick={() => onDelete(i)} >Delete</button>
                     </div>
                 ))}
             </ul>

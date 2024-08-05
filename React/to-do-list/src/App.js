@@ -12,6 +12,16 @@ const App = () => {
         setTasks([...tasks, newTask]);
     };
 
+    // const deleteTask = (index) => {
+    //     setTasks(tasks.filter((_, i) => i !== index))
+    // }
+
+    const deleteTask = (index) => {
+        const newTasks = [...tasks.slice(0, index), ...tasks.slice(index + 1)];
+        setTasks(newTasks);
+    };
+
+
     const setComplete = (index) => {
         const updatedTasks = tasks.map((task, i) =>
             i === index ? { ...task, completed: !task.completed } : task
@@ -22,7 +32,7 @@ const App = () => {
     return (
         <div>
             <TaskForm onAddTask={handleAddTask} />
-            <DisplayTasks tasks={tasks} checkComplete={setComplete} />
+            <DisplayTasks tasks={tasks} onDelete={deleteTask} checkComplete={setComplete} />
         </div>
     );
 }
