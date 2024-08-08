@@ -11,8 +11,9 @@ import {
 function App() {
   return (
     <div className="App">
+      <Form></Form>
     <Routes>
-                <Route path="/" element={<Form />} />
+                {/* <Route path="/" element={<Form />} /> */}
                 <Route path="/:resourceType/:id" element={<ItemDetails />} />
             </Routes>
       

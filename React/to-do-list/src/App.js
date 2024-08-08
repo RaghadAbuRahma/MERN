@@ -4,8 +4,8 @@ import DisplayTasks from './components/DisplayTasks';
 
 const App = () => {
     const [tasks, setTasks] = useState([
-        { text: "get MERN black belt", completed: false },
-        { text: "get JAVA black belt", completed: false },
+        // { text: "get MERN black belt", completed: false },
+        // { text: "get JAVA black belt", completed: false },
     ]);
 
     const handleAddTask = (newTask) => {

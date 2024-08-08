@@ -12,7 +12,7 @@ const TaskForm = (props) => {
         const newTask = { text, completed: isCompleted };
         
         props.onAddTask({text:text, isCompleted:false});
-                setCompleted(false);
+        setCompleted(false);
         setText("");
     };
 

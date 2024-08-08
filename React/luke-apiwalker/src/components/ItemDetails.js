@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 
 function ItemDetails() {
     const { resourceType, id } = useParams();
-    const [item, setItem] = useState(null);
+    const [item, setItem] = useState("");
 
     const fetchItem = () => {
         fetch(`https://swapi.dev/api/${resourceType}/${id}/`)
@@ -17,19 +17,16 @@ function ItemDetails() {
         fetchItem();
     }, [resourceType, id]);
 
-    // Only render the item when it has been fetched and setItem has been called
     if (!item) {
         return <div>Loading...</div>;
     }
-    else if (item.name || item.title == null){
-        return "item not found"
-    }
-        
-    
-
+    // else if (item.name || item.title == null){
+    //     return "item not found"
+    // }
     return (
         <div>
-            <h1>{item.name || item.title}</h1>
+            {Object.keys(item).slice(0,4).map((key, i) => 
+                <li key={i} ><h4>{key}</h4>{item[key]}</li>)}
             
         </div>
     );

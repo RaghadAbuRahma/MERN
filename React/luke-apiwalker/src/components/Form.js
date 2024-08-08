@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 export default function Form() {
-    const [selectedResource, setSelectedResource] = useState('');
+    const [selectedResource, setSelectedResource] = useState('people');
     const [resourceTypes, setResourceTypes] = useState([]);
-    const [id, setID] = useState('');
+    const [id, setID] = useState(1);
     const navigate = useNavigate();
 
     const fetchResources = () => {
