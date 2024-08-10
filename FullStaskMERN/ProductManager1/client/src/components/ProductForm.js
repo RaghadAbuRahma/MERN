@@ -19,7 +19,6 @@ export default (props) => {
         })
 
     
-
             .then(res=> {
             props.addProduct(res.data)
             console.log(res)})

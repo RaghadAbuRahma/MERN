@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import ProductForm from './components/ProductForm';
 import { useState } from 'react';
+import UpdateForm from './components/UpdateForm';
 function App() {
 
 
@@ -21,6 +22,7 @@ function App() {
           <Routes>
               <Route path="/products" element={<Main/>} />
               <Route  path="/products/:id" element={<ProductDetails/>}/>
+              <Route path="/products/:id/edit" element={<UpdateForm/>} />
           </Routes>
         </div>
     </div>
