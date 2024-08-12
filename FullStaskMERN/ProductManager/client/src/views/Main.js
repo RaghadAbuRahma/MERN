@@ -5,7 +5,6 @@ import AllProducts from '../components/AllProducts';
 import axios from 'axios';
 import { Routes } from 'react-router-dom';
 export default () => {
-    //   const [newProduct, setNewProduct] = useState({})
     const [products, setProducts] = useState([])
 
 

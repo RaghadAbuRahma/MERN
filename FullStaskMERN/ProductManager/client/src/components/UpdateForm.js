@@ -21,7 +21,7 @@ const UpdateForm = (props) => {
             console.log(res.data)
         })
         .catch(err=>console.log(err))
-    } ,[id])
+    } ,[id]) 
 
     
     const updateProduct = e => {
