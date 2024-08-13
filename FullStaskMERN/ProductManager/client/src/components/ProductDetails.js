@@ -12,9 +12,6 @@ function ProductDetails(props) {
     const [product, setProduct] = useState({})
     const { id } = useParams(); 
     const navigate = useNavigate();
-
-
-
     useEffect(() => {
         axios.get('http://localhost:8000/api/products/'+ id) 
         .then(res=>{
@@ -22,7 +19,7 @@ function ProductDetails(props) {
             console.log(res.data)
         })
         .catch(err=>console.log(err))
-    } ,[id])
+    } , [id , product])
 
     const deleteProduct = (id) => {
         axios.delete('http://localhost:8000/api/products/' + id)

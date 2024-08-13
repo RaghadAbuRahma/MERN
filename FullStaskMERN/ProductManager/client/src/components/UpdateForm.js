@@ -33,7 +33,7 @@ const UpdateForm = (props) => {
         })
             .then(res => console.log(res))
             .catch(err => console.error(err));
-            navigate("/api/products/" + id);
+            navigate("/products/" + id);
 
     }
     
