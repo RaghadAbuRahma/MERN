@@ -3,7 +3,7 @@ const AuthorSchema = new mongoose.Schema({
     name: { type: String, 
         required: [
             true,
-            "Name is required"
+            "Name is required", 
         ]
     },
 

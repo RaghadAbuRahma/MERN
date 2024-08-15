@@ -28,7 +28,7 @@ useEffect(() => {
             setError("Author not found. Please check the URL or try again.");
             setLoaded(true); // To stop the loading state
         });
-    },[id])
+    },[])
 
     const updateAuthor = (updatedName) => {
         axios.patch('http://localhost:8000/api/authors/' + id + "/edit", { name: updatedName })
@@ -39,6 +39,7 @@ useEffect(() => {
             })
 
             .catch(err=>{
+                // console.log(err.response.data.errors.name.message)
                  const errorResponse = err.response.data.errors; // Get the errors from err.response.data
                  const errorArr = []; // Define a temp error array to push the messages in
                  for (const key of Object.keys(errorResponse)) { // Loop through all errors and get the messages

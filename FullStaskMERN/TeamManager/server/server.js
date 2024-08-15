@@ -1,12 +1,15 @@
 const express = require('express');
-const cors = require('cors') // This is new
 const app = express();
+const cors = require('cors')
 require('dotenv').config();
 const port = process.env.PORT;
-    
-app.use(cors()) // This is new
-require('./routes/person.routes')(app);
-app.listen(port, () => console.log(`Listening on port: ${port}`) );
+require('./config/mongoose.config'); 
+app.use(cors());
+app.use(express.json()); 
+app.use(express.urlencoded({ extended: true })); 
+require('./routes/player.routes')(app);
+app.listen(port, () => console.log(`Listening on port: ${port}`));
+
 
 
 

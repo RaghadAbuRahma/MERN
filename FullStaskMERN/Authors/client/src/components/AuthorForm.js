@@ -11,7 +11,7 @@ function AuthorForm(props) {
     const { initialName, onSubmitProp } = props;
     const [name, setName] = useState(initialName)
 
-    console.log(props.errors)
+    // console.log(props.errors)
 
     const onSubmitHandler = e => {
         e.preventDefault();
